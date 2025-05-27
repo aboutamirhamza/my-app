@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Header from "./Components/Header/Header";
+import Display from "./Components/Display";
+import Button from "./Components/Button";
 
 function App() {
   
@@ -7,8 +9,11 @@ function App() {
 
   return (
     <>
-      <h1><Header title="My Count" /> {count}</h1>
-      <button onClick={()=> setCount(count + 1)}>Add</button>
+      {/* <h1><Header title="My Count" /> {count}</h1>
+      <button onClick={()=> setCount(count + 1)}>Add</button> */}
+
+      <Display show={count} />
+      <Button count={count} setCount={setCount} />
     </>
   )
 }
